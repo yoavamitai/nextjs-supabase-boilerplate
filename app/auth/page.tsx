@@ -1,31 +1,27 @@
-import { Button } from '@/components/ui/button'
-import { Card, CardHeader, CardTitle } from '@/components/ui/card';
+"use client"
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { KeyRound } from 'lucide-react'
 import React from 'react';
-import { FaGoogle, FaGithub } from "react-icons/fa";
-
+import AuthButton from "./AuthButton"
 
 export default function Auth() {
   return (
     <div className="flex items-center justify-center w-full h-screen">
-      <Card className="w-96 h-96 rounded-md border p-5 space-y-5 relative">
-        <CardHeader className="flex flex-row items-center gap-2">
-          <KeyRound className='translate-y-0.5'/>
-          <CardTitle className='text-2xl font-bold'>Next + Supabase</CardTitle>
+      <Card className="w-96 p-5 space-y-5 relative">
+        <CardHeader>
+          <div className='flex flex-row items-center gap-2'>
+            <KeyRound className='translate-y-0.5' />
+            <CardTitle className='text-2xl font-bold'>Next + Supabase</CardTitle>
+          </div>
+          <CardDescription>Register / Sign in Today 👇</CardDescription>
         </CardHeader>
-        <p className='text-sm text-gray-300'>
-          Register / Sign in Today 👇
-        </p>
-        <Button className='flex justify-center items-center w-full' variant="outline">
-          <FaGithub className='w-4 h-4' />
-          <div className="w-2" />
-          Github
-        </Button>
-        <Button className='flex justify-center items-center w-full' variant="outline">
-          <FaGoogle className='w-4 h-4' />
-          <div className="w-2" />
-          Google
-        </Button>
+        <CardContent className='flex flex-col gap-3'>
+          <AuthButton authType="github" />
+          <AuthButton authType="google" />
+        </CardContent>
+
+
       </Card>
       <div className='glowBox -z-20' >
 
