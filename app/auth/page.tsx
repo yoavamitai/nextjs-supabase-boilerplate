@@ -10,7 +10,7 @@ export default function Auth() {
     <div className="flex items-center justify-center w-full h-screen">
       <Card className="w-96 h-96 rounded-md border p-5 space-y-5 relative">
         <CardHeader className="flex flex-row items-center gap-2">
-          <KeyRound />
+          <KeyRound className='translate-y-0.5'/>
           <CardTitle className='text-2xl font-bold'>Next + Supabase</CardTitle>
         </CardHeader>
         <p className='text-sm text-gray-300'>
