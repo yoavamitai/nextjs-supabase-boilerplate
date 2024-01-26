@@ -74,3 +74,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+.glowBox {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #d17ee6;
+  box-shadow:
+    0 0 60px 30px #d17ee6,
+    0 0 150px 110px #f0f,
+    0 0 200px 150px #0ff;
+}
